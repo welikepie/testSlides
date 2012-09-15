@@ -1,0 +1,56 @@
+.mankini-heading {
+	height: 103px;
+	background: url(imgs/heading/bg.png);
+	position: relative;
+	margin: 0 0 22px;
+
+
+	& .mask {
+		height: 100%;
+		-webkit-mask-image: url(imgs/heading/mask.png);
+	}
+
+
+	& h1 {
+		font-family: share, sans-serif;
+		margin: 0;
+		text-transform: uppercase;
+		color: #fff;
+		text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+		font-size: 57px;
+		position: absolute;
+		left: 0;
+		bottom: -8px;
+
+		@include transform-origin(0, 0);
+		@include transform( rotate(-2.6deg) translate(-180px,0) );
+	}
+
+	&.animate h1 {
+		@include transition(all, 0.6s, $ease-out-quad);
+	}
+
+	&.on h1 {
+		@include transform( rotate(-2.6deg) translate(18px,0) );
+	}
+
+	@include hd {
+		height: 182px;
+		background-image: url(imgs/heading/bg@hd.jpg);
+		margin: 0 0 33px;
+
+		& .mask {
+			-webkit-mask-image: url(imgs/heading/mask@hd.png);
+			-webkit-mask-repeat: no-repeat;
+		}
+
+		& h1 {
+			text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+			font-size: 92px;
+			left: 21px;
+			bottom: -13px;
+
+			@include transform( rotate(-2.6deg) translate(-360px,0) );
+		}
+	}
+}

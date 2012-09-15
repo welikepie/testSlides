@@ -1,0 +1,25 @@
+.mankini-code {
+	background: url(imgs/paper.png);
+	margin: 0 2.3em 1em;
+	box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+	font-weight: bold;
+	overflow: hidden;
+	height: 0;
+	opacity: 0;
+	font-size: 20px;
+
+	& code {
+		display: block;
+		padding: 0.9em 1em 0.75em;
+		font-family: consolas, monospace;
+		line-height: 1.3;
+	}
+
+	@include hd {
+		font-size: 33px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+
+		& code {
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.slide {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	background: url('imgs/slide/bg.jpg');
+	background-size: 100% 100%;
+	overflow: hidden;
+
+	@include hd {
+		background-image: url('imgs/slide/bg@hd.jpg');
+	}
+
+	&.white {
+		background: #fff;
+	}
+
+	&.scrap-paper {
+		background: url('imgs/slide/scrap-paper.jpg');
+		@include hd {
+			background: url('imgs/slide/scrap-paper@hd.jpg');
+		}
+	}
+}

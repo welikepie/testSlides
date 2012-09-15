@@ -1,0 +1,33 @@
+.mankini-title {
+	height: 100%;
+	background: url(imgs/title/bg.jpg) no-repeat;
+
+	& h1 {
+		margin: 0;
+		position: absolute;
+		bottom: 254px;
+		right: 29px;
+		font-family: share, sans-serif;
+		font-size: 127px;
+		color: #fff;
+		text-transform: uppercase;
+		text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+		text-align: right;
+		line-height: 1;
+		width: 867px;
+	}
+}
+
+@include hd {
+	.mankini-title {
+		background-image: url('imgs/title/bg@hd.jpg');
+
+		& h1 {
+			bottom: 416px;
+			right: 35px;
+			text-shadow: 0 6px 8px rgba(0, 0, 0, 0.6);
+			font-size: 164px;
+			width: 1822px;
+		}
+	}
+}
